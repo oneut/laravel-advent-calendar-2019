@@ -9,12 +9,18 @@ ControllerはHomeControllerのみです。
 
 ```sh
 cd laravel-advent-calendar-2019
+cp .env.example .env
 docker-compose up -d
 ```
 
 ### Composer install
 ```
 docker-compose exec php-fpm composer install
+```
+
+### Generate key
+```
+docker-compose exec php-fpm php artisan key:generate
 ```
 
 ### Migration & Seeder
