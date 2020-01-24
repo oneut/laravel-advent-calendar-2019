@@ -8,3 +8,4 @@ RUN apk add git
 RUN git clone https://github.com/phpredis/phpredis.git /usr/src/php/ext/redis
 RUN docker-php-ext-install redis
 RUN docker-php-ext-install pdo_mysql mysqli mbstring
+RUN chown -R www-data:www-data /var/www
